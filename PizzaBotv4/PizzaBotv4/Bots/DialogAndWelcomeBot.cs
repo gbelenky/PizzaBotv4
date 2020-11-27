@@ -35,7 +35,7 @@ namespace PizzaBotv4.Bots
                 {
                     var welcomeCard = CreateAdaptiveCardAttachment();
                     var response = MessageFactory.Attachment(welcomeCard);
-                    response.Speak = MainDialog.SSML("Hello from your pizza service. We bake the best Italian pizza in town! In America pizza usually falls into two categories: thick and cheesy Chicago style or thin and more traditional New York pizza. In Italy pizza also falls into two distinct categories: Italian pizza and the rest of the world. It might seem silly considering the basic ingredients, but one taste of a true Italian pizza and that’s it. You will never feel the same about this simple and delicious food again.");
+                    response.Speak = MainDialog.SSML("Hello from your pizza service. We bake the best Italian pizza in town! In Italy pizza falls into two distinct categories: Italian pizza and the rest of the world. You will never feel the same about this simple and delicious food again.");
                     await turnContext.SendActivityAsync(response, cancellationToken);
                     await Dialog.RunAsync(turnContext, ConversationState.CreateProperty<DialogState>("DialogState"), cancellationToken);
                 }
